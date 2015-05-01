@@ -1,0 +1,11 @@
+{
+  "name": "cylon-bbduino",
+  "version": "0.0.1",
+  "description": "A cylon adapter to open bluetooth communication with arduino+hc-06",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jtbonhomme@gmail.com",
+  "license": "ISC"
+}
