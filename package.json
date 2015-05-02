@@ -1,14 +1,19 @@
 {
   "name": "cylon-bbduino",
   "version": "0.0.1",
-  "description": "A cylon adapter to open bluetooth communication with arduino+hc-06",
-  "main": "lib/index.js",
+  "description": "A cylon adapter to open bluetooth communication with an arduino and a bt serial module hc-06",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "lib/cylon-bbduino.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtbonhomme/cylon-bbduino"
   },
   "author": "jtbonhomme@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "cylon": "^1.0.0",
     "serialport": "^1.6.3"
   }
 }
