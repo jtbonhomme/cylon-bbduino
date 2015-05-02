@@ -29,23 +29,25 @@ Cylon.robot({
       console.log('[cylon-bbduino] [work] notification : ' + JSON.stringify(data));
     });
 
-    my.bbduino.on('message', function(data) {
-      console.log('[cylon-bbduino] [work] message : ' + data);
-    });
-
-    my.bbduino.on('data', function(data) {
-      console.log('[cylon-bbduino] [work] data : ' + data);
-    });
-
     my.bbduino.on('disconnect', function() {
       bbduino.log('[cylon-bbduino] [work] disconnect');
+    });
+
+    my.bbduino.getVersion(function(version) {
+      console.log('[cylon-bbduino] [work] Bbduino version ' + version);
     });
 
     setTimeout(function(){
       my.bbduino.ping(function() {
         console.log('[cylon-bbduino] [work] Bbduino pinged');
       });
-  }, 5000);
+    }, 5000);
+
+    setTimeout(function(){
+      my.bbduino.disconnect(function() {
+        console.log('[cylon-bbduino] [work] Bbduino disconnect');
+      });
+    }, 10000);
 
   }
 });
