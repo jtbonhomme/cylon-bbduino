@@ -37,7 +37,7 @@ Cylon.robot({
       console.log('[cylon-bbduino] [work] data : ' + data);
     });
 
-    my.sphero.on('disconnect', function() {
+    my.bbduino.on('disconnect', function() {
       bbduino.log('[cylon-bbduino] [work] disconnect');
     });
 
