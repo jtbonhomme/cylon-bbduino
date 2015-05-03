@@ -44,11 +44,27 @@ Cylon.robot({
     }, 5000);
 
     setTimeout(function(){
+      my.bbduino.servo(10, function() {
+        console.log('[cylon-bbduino] [work] Bbduino servo 30');
+      });
+    }, 6500);
+
+    setTimeout(function(){
+      my.bbduino.servo(250, function() {
+        console.log('[cylon-bbduino] [work] Bbduino servo 250');
+      });
+    }, 8500);
+
+    setTimeout(function(){
       my.bbduino.disconnect(function() {
         console.log('[cylon-bbduino] [work] Bbduino disconnect');
       });
     }, 10000);
 
+    setTimeout(function(){
+       console.log('Goodbye ...');
+       process.exit(0);
+    }, 15000);
   }
 });
 

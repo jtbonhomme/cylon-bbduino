@@ -1,6 +1,6 @@
 {
   "name": "cylon-bbduino",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A cylon driver and adapter to comuunicate with a bluetooth connected arduino (tested with a hc-06 module and a Arduino Uno)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
