@@ -44,8 +44,8 @@ Cylon.robot({
     }, 5000);
 
     setTimeout(function(){
-      my.bbduino.servo(10, function() {
-        console.log('[cylon-bbduino] [work] Bbduino servo 30');
+      my.bbduino.servo(5, function() {
+        console.log('[cylon-bbduino] [work] Bbduino servo 5');
       });
     }, 6500);
 

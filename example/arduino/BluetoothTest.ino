@@ -129,8 +129,8 @@ int parseBuffer(char *buffer, int blen) {
 #endif
 
   for( i = 1 ; i < plen ; i++ ) {
-    payload[i] = (unsigned char)buffer[5+i];
-    Serial.print(payload[i], HEX);
+    payload[i-1] = (unsigned char)buffer[5+i];
+    Serial.print(payload[i-1], HEX);
     Serial.print(" ");
   }
   Serial.println(chk, HEX);
@@ -150,8 +150,12 @@ int parseBuffer(char *buffer, int blen) {
   else {
     switch(cid) {
       case 0x31:
-        value = payload[0];
-        servoSetPosition(value/255*3000);
+        value = 12*payload[0];
+        Serial.print("[CMD] change servo position : ");
+        Serial.println(payload[0]);
+        Serial.print(" > ");
+        Serial.println(value);
+        servoSetPosition(value);
         break;
       default:
         break;
